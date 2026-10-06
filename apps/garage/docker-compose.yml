@@ -1,0 +1,17 @@
+services:
+  garage:
+    image: dxflrs/garage:v2.4.1
+    command: ["/garage", "-c", "/etc/garage/garage.toml", "server"]
+    ports:
+      # S3 API, used to upload builds. Bound to the LAN IP only.
+      - ${NETWORK_INTERFACE:-0.0.0.0}:3900:3900
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/etc/garage
+      - ${APP_DATA_DIR}/data/meta:/var/lib/garage/meta
+      - ${APP_DATA_DIR}/data/data:/var/lib/garage/data
+    x-runtipi:
+      # Web endpoint: public read-only URL that Unity downloads from
+      internal_port: 3902
+      is_main: true
+x-runtipi:
+  schema_version: 2

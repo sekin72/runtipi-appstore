@@ -1,0 +1,21 @@
+{
+  "name": "Garage",
+  "id": "garage",
+  "description": "Lightweight, self-hosted S3-compatible object storage by Deuxfleurs.",
+  "short_desc": "S3-compatible object storage",
+  "version": "v2.4.1",
+  "tipi_version": 1,
+  "min_tipi_version": "4.5.0",
+  "author": "deuxfleurs",
+  "source": "https://github.com/deuxfleurs-org/garage",
+  "website": "https://garagehq.deuxfleurs.fr",
+  "port": 3902,
+  "exposable": true,
+  "dynamic_config": true,
+  "available": true,
+  "categories": ["utilities"],
+  "supported_architectures": ["arm64", "amd64"],
+  "form_fields": [],
+  "created_at": 1791244800000,
+  "updated_at": 1791244800000
+}
